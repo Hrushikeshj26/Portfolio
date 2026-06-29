@@ -66,7 +66,7 @@ const itemVariants = {
 const Home = () => {
   return (
     <div className="min-h-screen pb-10">
-      <div className="min-h-40 w-full bg-gradient-to-r from-violet-800 to-violet-950 relative overflow-hidden">
+      <div className="min-h-40 w-full bg-linear-to-r from-violet-800 to-violet-950 relative overflow-hidden">
         <div
           className="absolute inset-0 z-0 pointer-events-none opacity-40"
           style={{
@@ -120,7 +120,7 @@ const Home = () => {
         </motion.div>
       </motion.div>
 
-      <div className="px-6 md:px-10 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 max-w-[1400px]">
+      <div className="px-6 md:px-10 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 max-w-350">
         
         <motion.div 
           initial="hidden"
