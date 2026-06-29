@@ -13,21 +13,22 @@
 @layer utilities {
   /* --- Backgrounds --- */
 
-  .bg-main { background-color: var(--color-zinc-900); }
-  .bg-card { background-color: var(--color-zinc-800); }
-  .bg-surface { background-color: var(--color-zinc-700); }
-  .bg-second { background-color: var(--color-zinc-900); } 
+  .bg-main { background-color: #261f32; }
+  .bg-card { background-color: #41394f; }
+  .bg-card2 { background-color: #2f2441; }
+  .bg-surface { background-color: #625d73; }
+  .bg-second { background-color: #423655; } 
 
 
   /* --- Borders --- */
-  .border-subtle { border-color: var(--color-zinc-700); }
-  .border-second { border-color: var(--color-zinc-600); }
-  .border-main { border-color: var(--color-violet-500); }
-  .hover\:border-active:hover { border-color: var(--color-violet-400); }
+  .border-subtle { border-color: #858585; }
+  .border-second { border-color: #594ba0; }
+  .border-main { border-color: #fbfafb; }
+
 
 
   /* --- Buttons --- */
-  .bg-btn { background-color: var(--color-violet-600); }
-  .hover\:bg-btn-hover:hover { background-color: var(--color-violet-500); }
+  .bg-btn { background-color: #594ba0; }
+  .hover\:bg-btn-hover:hover { background-color: #5948b1; }
   .text-btn { color: var(--color-white); }
 }
