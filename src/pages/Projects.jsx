@@ -15,7 +15,7 @@ import momento from '../assets/momento.png';
 import nexora from '../assets/Nexora.png';
 import novacrypto from '../assets/NovaCrypto.png';
 import technest from '../assets/TechNest.jpg';
-import cravingo from '../assets/cravingo.jpg'
+import cravingo from '../assets/cravingo.JPG'
 
 const TECH_META = {
   "React.js": { icon: SiReact, color: "text-sky-400", ring: "border-sky-500/30 bg-sky-500/10" },
