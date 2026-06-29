@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Home, Layers, User, MessageSquare, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -38,9 +38,9 @@ const Sidebar = () => {
       {/* --- Mobile Top Header (Glassmorphism) --- */}
       <div className="md:hidden fixed top-0 left-0 right-0 h-16 bg-main/80 backdrop-blur-md border-b border-subtle flex items-center justify-between px-6 z-40 shadow-sm">
         <div className="font-spacemono">
-          <h1 className="text-xl font-bold text-white flex items-baseline tracking-tight">
+          <Link to='/' className="text-xl font-bold text-white flex items-baseline tracking-tight">
             hrushij<span className="text-violet-500">.dev</span>
-          </h1>
+          </Link>
         </div>
         <motion.button 
           whileTap={{ scale: 0.9 }}
@@ -76,9 +76,9 @@ const Sidebar = () => {
         <div>
           {/* Logo */}
           <div className="mb-12 font-spacemono px-8">
-            <h1 className="text-xl md:text-2xl font-bold text-white flex items-baseline md:justify-center tracking-tight">
+            <Link to='/' className="text-xl md:text-2xl font-bold text-white flex items-baseline md:justify-center tracking-tight">
               hrushij<span className="text-violet-500 text-2xl">.dev</span>
-            </h1>
+            </Link>
           </div>
           
           {/* Navigation */}
