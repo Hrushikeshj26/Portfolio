@@ -38,7 +38,7 @@ const Footer = () => {
 
   return (
     <footer className="relative mt-20 pb-8 pt-12">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-6xl h-[2px] bg-linear-to-r from-transparent via-violet-500 to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-6xl h-0.5 bg-linear-to-r from-transparent via-violet-500 to-transparent" />
       
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-lg h-24 bg-violet-600/5 blur-[80px] pointer-events-none" />
 

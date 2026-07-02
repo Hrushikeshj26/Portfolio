@@ -83,33 +83,6 @@ const beyondCoding = [
   { title: "Competitive Gaming", icon: Gamepad2, blurb: "Grinding ranks in BGMI, COD-M, Marvel Rivals, Valorant or trying out CS2." },
 ];
 
-const socialLinks = [
-  {
-    name: "GitHub",
-    href: "https://github.com/Hrushikeshj26",
-    icon: FaGithub,
-    hover: "hover:text-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]",
-  },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/hrushikeshj26/",
-    icon: FaLinkedin,
-    hover: "hover:text-sky-400 hover:bg-sky-500/10 hover:shadow-[0_0_15px_rgba(14,165,233,0.3)]",
-  },
-  {
-    name: "X (Twitter)",
-    href: "https://x.com/hrushimj?s=11",
-    icon: FaXTwitter,
-    hover: "hover:text-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]",
-  },
-  {
-    name: "Instagram",
-    href: "https://instagram.com/your-username",
-    icon: FaInstagram,
-    hover: "hover:text-fuchsia-400 hover:bg-fuchsia-500/10 hover:shadow-[0_0_15px_rgba(217,70,239,0.3)]",
-  },
-];
-
 const About = () => {
   return (
     <div className="min-h-screen pb-10">
@@ -257,24 +230,7 @@ const About = () => {
               <p className="text-gray-300 text-sm sm:text-base mb-8 max-w-md mx-auto tracking-wide">
                 Always happy to talk shop, swap project ideas, discuss the markets, or just say hello. Find me on:
               </p>
-              
-              <div className="flex items-center justify-center gap-4 mb-8">
-                {socialLinks.map(({ name, href, icon: Icon, hover }) => (
-                  <motion.a
-                    key={name}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={name}
-                    whileHover={{ scale: 1.1, y: -4 }}
-                    whileTap={{ scale: 0.95 }}
-                    className={`flex items-center justify-center w-12 h-12 rounded-full bg-main border border-subtle text-gray-400 transition-colors duration-300 shadow-sm ${hover}`}
-                  >
-                    <Icon size={20} />
-                  </motion.a>
-                ))}
-              </div>
-              
+                            
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

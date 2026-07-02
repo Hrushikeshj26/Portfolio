@@ -193,26 +193,6 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="bg-card2 border border-zinc-500 rounded-2xl p-8 shadow-lg">
-            <h3 className="text-white font-bold text-lg mb-6 font-spacemono tracking-tight">
-              Connect
-            </h3>
-            <div className="flex flex-wrap gap-4">
-              {socialLinks.map(({ name, href, icon: Icon, hover }) => (
-                <motion.a
-                  key={name}
-                  whileHover={{ y: -4, scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`flex items-center justify-center w-12 h-12 rounded-full bg-card border-2 border-zinc-500 text-gray-300 transition-all ${hover}`}
-                >
-                  <Icon size={20} />
-                </motion.a>
-              ))}
-            </div>
-          </div>
         </motion.div>
       </div>
     </div>

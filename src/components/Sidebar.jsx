@@ -36,7 +36,7 @@ const Sidebar = () => {
   return (
     <>
       {/* --- Mobile Top Header (Glassmorphism) --- */}
-      <div className="md:hidden fixed top-0 left-0 right-0 h-16 bg-main/80 backdrop-blur-md border-b border-subtle flex items-center justify-between px-6 z-40 shadow-sm">
+      <div className="md:hidden fixed top-0 left-0 right-0 h-16 bg-main/80 backdrop-blur-xl border-b border-subtle flex items-center justify-between px-6 z-40 shadow-sm">
         <div className="font-spacemono">
           <Link to='/' className="text-xl font-bold text-white flex items-baseline tracking-tight">
             hrushij<span className="text-violet-500">.dev</span>
@@ -67,7 +67,7 @@ const Sidebar = () => {
       {/* --- Sidebar Drawer (Desktop & Mobile) --- */}
       <div 
         className={`
-          fixed md:relative top-0 left-0 w-64 min-h-screen bg-main border-r border-subtle flex flex-col justify-between py-8 z-50 
+          fixed top-0 left-0 w-64 h-screen bg-main border-r border-subtle flex flex-col justify-between py-8 z-50 
           transition-transform duration-500 cubic-bezier(0.16, 1, 0.3, 1)
           ${isOpen ? 'translate-x-0 shadow-2xl' : '-translate-x-full'} 
           md:translate-x-0 md:shadow-none
