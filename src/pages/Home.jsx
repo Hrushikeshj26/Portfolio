@@ -108,7 +108,7 @@ const Home = () => {
           </div>
           
           <motion.a 
-            href="/resume.pdf" 
+            href="/Hrushikesh-resume.pdf" 
             download
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
@@ -120,7 +120,7 @@ const Home = () => {
         </motion.div>
       </motion.div>
 
-      <div className="px-6 md:px-10 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 max-w-350">
+      <div className="px-6 md:px-10 lg:px-12 grid grid-cols-1 mx-auto lg:grid-cols-13 max-w-7xl gap-10 lg:gap-16 ">
         
         <motion.div 
           initial="hidden"
@@ -196,7 +196,7 @@ const Home = () => {
           </motion.section>
         </motion.div>
 
-        <div className="lg:col-span-5">
+        <div className="lg:col-span-6">
           <motion.section 
             initial="hidden"
             whileInView="visible"

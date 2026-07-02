@@ -10,36 +10,6 @@ const Contact = () => {
     message: "",
   });
 
-  const socialLinks = [
-    {
-      name: "GitHub",
-      href: "https://github.com/Hrushikeshj26",
-      icon: FaGithub,
-      hover:
-        "hover:text-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]",
-    },
-    {
-      name: "LinkedIn",
-      href: "https://www.linkedin.com/in/hrushikeshj26/",
-      icon: FaLinkedin,
-      hover:
-        "hover:text-sky-400 hover:bg-sky-500/10 hover:shadow-[0_0_15px_rgba(14,165,233,0.3)]",
-    },
-    {
-      name: "X (Twitter)",
-      href: "https://x.com/hrushimj?s=11",
-      icon: FaXTwitter,
-      hover:
-        "hover:text-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]",
-    },
-    {
-      name: "Instagram",
-      href: "https://instagram.com/your-username",
-      icon: FaInstagram,
-      hover:
-        "hover:text-fuchsia-400 hover:bg-fuchsia-500/10 hover:shadow-[0_0_15px_rgba(217,70,239,0.3)]",
-    },
-  ];
 
   const handleSubmit = (e) => {
     e.preventDefault();

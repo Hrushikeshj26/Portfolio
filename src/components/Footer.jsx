@@ -7,7 +7,7 @@ const socialLinks = [
     name: "GitHub",
     href: "https://github.com/Hrushikeshj26",
     icon: FaGithub,
-    hover: "hover:text-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]",
+    hover: "hover:text-white hover:bg-zinc-900/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]",
   },
   {
     name: "LinkedIn",
@@ -19,7 +19,7 @@ const socialLinks = [
     name: "X (Twitter)",
     href: "https://x.com/hrushimj?s=11",
     icon: FaXTwitter,
-    hover: "hover:text-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]",
+    hover: "hover:text-white hover:bg-zinc-900/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]",
   },
   {
     name: "Instagram",

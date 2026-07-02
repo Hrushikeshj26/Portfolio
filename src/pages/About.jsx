@@ -83,6 +83,7 @@ const beyondCoding = [
   { title: "Competitive Gaming", icon: Gamepad2, blurb: "Grinding ranks in BGMI, COD-M, Marvel Rivals, Valorant or trying out CS2." },
 ];
 
+
 const About = () => {
   return (
     <div className="min-h-screen pb-10">
@@ -119,8 +120,8 @@ const About = () => {
         </motion.div>
       </div>
 
-      <div className="px-6 md:px-5 lg:px-5 space-y-16 md:max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+      <div className="px-6 md:px-5 lg:px-12 space-y-16 md:max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
           
           <section className="lg:col-span-5">
             <h2 className="text-2xl font-bold text-white mb-2 font-spacemono tracking-tight">My Journey</h2>
