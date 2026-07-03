@@ -11,7 +11,7 @@ import { ArrowUpRight, FolderGit2 } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-import momento from '../assets/momento.png';
+import momento from '../assets/momento.JPG';
 import nexora from '../assets/Nexora.png';
 import novacrypto from '../assets/NovaCrypto.png';
 import technest from '../assets/TechNest.jpg';
