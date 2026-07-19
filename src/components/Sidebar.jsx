@@ -38,8 +38,8 @@ const Sidebar = () => {
       {/* --- Mobile Top Header (Glassmorphism) --- */}
       <div className="md:hidden fixed top-0 left-0 right-0 h-16 bg-main/80 backdrop-blur-xl border-b border-subtle flex items-center justify-between px-6 z-40 shadow-sm">
         <div className="font-spacemono">
-          <Link to='/' className="text-xl font-bold text-white flex items-baseline tracking-tight">
-            hrushij<span className="text-violet-500">.dev</span>
+          <Link to='/' className="text-xl font-bold flex items-baseline tracking-tight">
+            hrushij<span className="text-main">.dev</span>
           </Link>
         </div>
         <motion.button 
@@ -77,7 +77,7 @@ const Sidebar = () => {
           {/* Logo */}
           <div className="mb-12 font-spacemono px-8">
             <Link to='/' className="text-xl md:text-2xl font-bold text-white flex items-baseline md:justify-center tracking-tight">
-              hrushij<span className="text-violet-500 text-2xl">.dev</span>
+              hrushij<span className="text-main text-2xl">.dev</span>
             </Link>
           </div>
           
@@ -96,8 +96,8 @@ const Sidebar = () => {
                   className={({ isActive }) =>
                     `group relative flex items-center space-x-4 px-5 py-3.5 rounded-xl transition-all duration-300 overflow-hidden ${
                       isActive
-                        ? 'text-white bg-linear-to-r from-[#594ba0]/80 to-transparent font-semibold shadow-sm'
-                        : 'text-gray-400 hover:text-white hover:bg-[#594ba0]/20 font-medium'
+                        ? 'text-white bg-linear-to-r from-[#89b4fa]/80 to-transparent font-semibold shadow-sm'
+                        : 'text-gray-400 hover:text-white hover:bg-[#89b4fa]/20 font-medium'
                     }`
                   }
                 >
@@ -107,7 +107,7 @@ const Sidebar = () => {
                       {isActive && (
                         <motion.div 
                           layoutId="activeTabIndicator"
-                          className="absolute right-0 top-0 bottom-0 w-1.5 bg-violet-400 rounded-l-full"
+                          className="absolute right-0 top-0 bottom-0 w-1.5 bg-[#89b4fa] rounded-l-full"
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           transition={{ duration: 0.3 }}
@@ -116,7 +116,7 @@ const Sidebar = () => {
                       
                       {/* Icon & Text with Hover Physics */}
                       <span className={`transition-transform duration-300 ${!isActive && 'group-hover:translate-x-1'}`}>
-                        <item.icon size={20} strokeWidth={isActive ? 2.5 : 2} className={isActive ? 'text-violet-300' : ''}/>
+                        <item.icon size={20} strokeWidth={isActive ? 2.5 : 2} className={isActive ? 'text-main' : ''}/>
                       </span>
                       <span className={`text-base transition-transform duration-300 ${!isActive && 'group-hover:translate-x-1'}`}>
                         {item.name}

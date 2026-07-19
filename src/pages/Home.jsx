@@ -10,7 +10,7 @@ import {
   Wrench,
   Users,
 } from "lucide-react";
-import profilepic from "../assets/profile-pic.png";
+import profilepic from "../assets/hmj2.jpg";
 
 const skillCategories = [
   {
@@ -66,26 +66,26 @@ const itemVariants = {
 const Home = () => {
   return (
     <div className="min-h-screen pb-10">
-      <div className="min-h-40 w-full bg-linear-to-r from-violet-800 to-violet-950 relative overflow-hidden">
+      <div className="min-h-40 w-full bg-linear-to-r from-[#89b4fa]/40 to-[#89b4fa]/50 relative overflow-hidden">
         <div
-          className="absolute inset-0 z-0 pointer-events-none opacity-40"
+          className="absolute inset-0 z-0 pointer-events-none opacity-50"
           style={{
             backgroundImage: `
-              repeating-linear-gradient(45deg, rgba(139, 92, 246, 0.4) 0, rgba(139, 92, 246, 0.4) 1px, transparent 1px, transparent 32px),
-              repeating-linear-gradient(-45deg, rgba(139, 92, 246, 0.4) 0, rgba(139, 92, 246, 0.4) 1px, transparent 1px, transparent 32px)
-            `,
+        repeating-linear-gradient(45deg, rgba(203, 166, 247, 0.4) 0, rgba(203, 166, 247, 0.4) 1px, transparent 1px, transparent 32px),
+        repeating-linear-gradient(-45deg, rgba(203, 166, 247, 0.4) 0, rgba(203, 166, 247, 0.4) 1px, transparent 1px, transparent 32px)
+      `,
             backgroundSize: "46px 46px",
           }}
         />
       </div>
 
-      <motion.div 
+      <motion.div
         initial="hidden"
         animate="visible"
         variants={containerVariants}
         className="px-6 md:px-10 lg:px-12 flex flex-col sm:flex-row items-center sm:items-end w-full relative z-10 -mt-16 sm:-mt-20 mb-12 gap-5 sm:gap-8"
       >
-        <motion.div 
+        <motion.div
           variants={itemVariants}
           whileHover={{ scale: 1.05 }}
           className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full border-[3px] border-main overflow-hidden bg-surface shrink-0 shadow-2xl"
@@ -97,22 +97,25 @@ const Home = () => {
           />
         </motion.div>
 
-        <motion.div variants={itemVariants} className="flex flex-col md:flex-row items-center md:items-end justify-between w-full text-center sm:text-left gap-6 md:gap-0">
+        <motion.div
+          variants={itemVariants}
+          className="flex flex-col md:flex-row items-center md:items-end justify-between w-full text-center sm:text-left gap-6 md:gap-0"
+        >
           <div>
             <h1 className="text-3xl sm:text-4xl font-bold font-spacemono text-white tracking-tight mb-1">
               Hrushikesh Jadhav
             </h1>
-            <p className="text-violet-300 font-spacemono font-semibold text-sm sm:text-base tracking-wide uppercase">
+            <p className="text-main font-spacemono font-semibold text-sm sm:text-base tracking-wide uppercase">
               Frontend Developer
             </p>
           </div>
-          
-          <motion.a 
-            href="/Hrushikesh-resume.pdf" 
+
+          <motion.a
+            href="/Hrushikesh-resume.pdf"
             download
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
-            className="w-full md:w-auto flex justify-center items-center space-x-2 bg-btn hover:bg-btn-hover text-white px-6 py-3 rounded-xl font-semibold transition-colors duration-300 shadow-lg shadow-violet-500/20"
+            className="w-full md:w-auto flex justify-center items-center space-x-2 bg-btn hover:bg-btn-hover text-btn px-6 py-3 rounded-xl font-semibold transition-colors duration-300 shadow-lg shadow-[#2a4463]"
           >
             <span>Download Resume</span>
             <Download size={18} />
@@ -121,26 +124,32 @@ const Home = () => {
       </motion.div>
 
       <div className="px-6 md:px-10 lg:px-12 grid grid-cols-1 mx-auto lg:grid-cols-13 max-w-7xl gap-10 lg:gap-16 ">
-        
-        <motion.div 
+        <motion.div
           initial="hidden"
           animate="visible"
           variants={containerVariants}
           className="lg:col-span-7 space-y-12"
         >
           <motion.section variants={itemVariants} className="flex flex-col">
-            <h2 className="text-2xl font-bold text-white mb-4 font-spacemono tracking-tight">About me</h2>
+            <h2 className="text-2xl font-bold text-white mb-4 font-spacemono tracking-tight">
+              About me
+            </h2>
             <div className="text-gray-400 text-sm sm:text-base leading-relaxed space-y-4 max-w-2xl">
               <p>
-                I'm a frontend developer based in India, dedicated to crafting clean, modern, and aesthetic user interfaces. With a strong foundation in React.js, JavaScript, and Tailwind CSS, I focus on building responsive and accessible web applications.
+                I'm a frontend developer based in India, dedicated to crafting
+                clean, modern, and aesthetic user interfaces. With a strong
+                foundation in React.js, JavaScript, and Tailwind CSS, I focus on
+                building responsive and accessible web applications.
               </p>
               <p>
-                I love bridging the gap between design and engineering to deliver digital experiences that feel fast, fluid, and genuinely enjoyable to use.
+                I love bridging the gap between design and engineering to
+                deliver digital experiences that feel fast, fluid, and genuinely
+                enjoyable to use.
               </p>
             </div>
             <Link
               to="/about"
-              className="inline-flex items-center w-max text-violet-400 hover:text-violet-300 font-semibold text-sm sm:text-base mt-5 transition-colors group/about"
+              className="inline-flex items-center w-max text-second hover:text-second/30 font-semibold text-sm sm:text-base mt-5 transition-colors group/about"
             >
               Read the full story
               <ArrowRight
@@ -151,14 +160,14 @@ const Home = () => {
           </motion.section>
 
           <motion.section variants={itemVariants}>
-            <motion.div 
+            <motion.div
               whileHover={{ y: -4 }}
               className="bg-card border-2 border-main hover:border-second rounded-2xl p-6 sm:p-8 overflow-hidden transition-all duration-300 shadow-lg relative group"
             >
-              <div className="absolute top-0 right-0 w-40 h-40 bg-violet-600/10 rounded-full blur-3xl -mr-10 -mt-10 transition-colors group-hover:bg-violet-600/20 pointer-events-none" />
+              <div className="absolute top-0 right-0 w-40 h-40 bg-card rounded-full blur-3xl -mr-10 -mt-10 transition-colors group-hover:bg-[#89b4fa]/40 pointer-events-none" />
 
               <div className="relative z-10 flex flex-col sm:flex-row items-start sm:items-center gap-6">
-                <div className="p-4 bg-surface border border-subtle rounded-2xl text-violet-400 shrink-0 group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-300 shadow-md">
+                <div className="p-4 bg-surface border border-subtle rounded-2xl text-[#a6e3a1] shrink-0 group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-300 shadow-md">
                   <Briefcase size={28} />
                 </div>
 
@@ -177,12 +186,14 @@ const Home = () => {
                   </div>
 
                   <p className="text-gray-400 text-sm leading-relaxed mb-5 max-w-lg">
-                    I am currently open to freelance projects, contract work, and full-time frontend roles. If you have an exciting project in mind, let's build something awesome together.
+                    I am currently open to freelance projects, contract work,
+                    and full-time frontend roles. If you have an exciting
+                    project in mind, let's build something awesome together.
                   </p>
 
                   <Link
                     to="/contact"
-                    className="inline-flex items-center bg-violet-600 hover:bg-violet-500 text-white transition-colors text-sm font-semibold px-5 py-2.5 rounded-lg shadow-lg group/link"
+                    className="inline-flex items-center bg-btn text-btn transition-colors text-sm font-semibold px-5 py-2.5 rounded-lg shadow-lg group/link"
                   >
                     Let's talk
                     <ArrowRight
@@ -197,13 +208,16 @@ const Home = () => {
         </motion.div>
 
         <div className="lg:col-span-6">
-          <motion.section 
+          <motion.section
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
             variants={containerVariants}
           >
-            <motion.h2 variants={itemVariants} className="text-2xl font-bold text-white mb-6 font-spacemono tracking-tight">
+            <motion.h2
+              variants={itemVariants}
+              className="text-2xl font-bold text-white mb-6 font-spacemono tracking-tight"
+            >
               My Skills
             </motion.h2>
 
@@ -218,7 +232,9 @@ const Home = () => {
                     className={`bg-card border border-subtle ${category.ring} p-5 rounded-2xl flex flex-col transition-all duration-300 shadow-sm`}
                   >
                     <div className="flex items-center gap-3 mb-4">
-                      <span className={`flex items-center justify-center w-9 h-9 rounded-xl bg-surface border border-subtle ${category.accent} shrink-0 shadow-sm`}>
+                      <span
+                        className={`flex items-center justify-center w-9 h-9 rounded-xl bg-surface border border-subtle ${category.accent} shrink-0 shadow-sm`}
+                      >
                         <Icon size={18} strokeWidth={2.5} />
                       </span>
                       <h3 className="text-sm font-bold font-spacemono text-white tracking-wide">

@@ -38,7 +38,7 @@ const Footer = () => {
 
   return (
     <footer className="relative mt-20 pb-8 pt-12">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-6xl h-0.5 bg-linear-to-r from-transparent via-violet-500 to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-6xl h-0.5 bg-linear-to-r from-transparent via-[#89b4fa] to-transparent" />
       
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-lg h-24 bg-violet-600/5 blur-[80px] pointer-events-none" />
 
@@ -46,7 +46,7 @@ const Footer = () => {
   
         <div className="flex flex-col items-center md:items-start gap-2 order-2 md:order-1">
           <p className="text-white font-spacemono text-lg font-bold">
-            hrushij<span className="text-violet-400">.dev</span>
+            hrushij<span className="text-main">.dev</span>
           </p>
           <p className="text-gray-500 text-xs sm:text-sm font-medium">
             © {currentYear} • Engineered with React & Tailwind

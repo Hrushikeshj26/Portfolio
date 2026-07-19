@@ -11,24 +11,20 @@
 }
 
 @layer utilities {
-  /* --- Backgrounds --- */
+  .bg-main { background-color: #1e1e2e; }
+  .bg-card { background-color: #313244; }
+  .bg-card2 { background-color: #45475a; }
+  .bg-surface { background-color: #585b70; }
+  .bg-second { background-color: #181825; } 
 
-  .bg-main { background-color: #261f32; }
-  .bg-card { background-color: #41394f; }
-  .bg-card2 { background-color: #2f2441; }
-  .bg-surface { background-color: #625d73; }
-  .bg-second { background-color: #423655; } 
+  .border-subtle { border-color: #45475a; }
+  .border-second { border-color: #89b4fa;}
+  .border-main { border-color: #89b4fa; }
 
+  .text-main { color: #fab387 }
+  .text-second { color: #89b4fa; }
 
-  /* --- Borders --- */
-  .border-subtle { border-color: #858585; }
-  .border-second { border-color: #594ba0; }
-  .border-main { border-color: #fbfafb; }
-
-
-
-  /* --- Buttons --- */
-  .bg-btn { background-color: var(--color-violet-600) }
-  .hover\:bg-btn-hover:hover { background-color: var(--color-violet-700) }
-  .text-btn { color: var(--color-white); }
+  .bg-btn { background-color: #b4befe; }
+  .hover\:bg-btn-hover:hover { background-color: #a1acf0; }
+  .text-btn { color: #212131; }
 }

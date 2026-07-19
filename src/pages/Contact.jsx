@@ -20,11 +20,14 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen pb-16">
-      <div className="min-h-40 w-full bg-linear-to-r from-violet-800 to-violet-950 relative overflow-hidden">
+      <div className="min-h-40 w-full bg-linear-to-r from-[#89b4fa]/40 to-[#89b4fa]/50 relative overflow-hidden">
         <div
-          className="absolute inset-0 z-0 pointer-events-none opacity-40"
+          className="absolute inset-0 z-0 pointer-events-none opacity-50"
           style={{
-            backgroundImage: `repeating-linear-gradient(45deg, rgba(139, 92, 246, 0.4) 0, rgba(139, 92, 246, 0.4) 1px, transparent 1px, transparent 32px), repeating-linear-gradient(-45deg, rgba(139, 92, 246, 0.4) 0, rgba(139, 92, 246, 0.4) 1px, transparent 1px, transparent 32px)`,
+            backgroundImage: `
+        repeating-linear-gradient(45deg, rgba(203, 166, 247, 0.4) 0, rgba(203, 166, 247, 0.4) 1px, transparent 1px, transparent 32px),
+        repeating-linear-gradient(-45deg, rgba(203, 166, 247, 0.4) 0, rgba(203, 166, 247, 0.4) 1px, transparent 1px, transparent 32px)
+      `,
             backgroundSize: "46px 46px",
           }}
         />
@@ -37,7 +40,7 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           className="border-2 border-second rounded-2xl p-7 sm:p-10 shadow-2xl backdrop-blur-3xl max-w-4xl"
         >
-          <p className="text-xs font-spacemono uppercase tracking-widest text-violet-400 mb-3 font-bold">
+          <p className="text-xs font-spacemono uppercase tracking-widest text-second mb-3 font-bold">
             Contact Me
           </p>
           <h1 className="text-3xl sm:text-4xl font-bold font-spacemono text-white tracking-tight mb-4">
@@ -60,7 +63,7 @@ const Contact = () => {
         >
           <div className="bg-card border-2 border-zinc-500 rounded-2xl p-6 sm:p-8 shadow-lg">
             <h2 className="text-xl font-bold text-white mb-6 flex items-center font-spacemono tracking-tight">
-              <MessageSquare className="text-violet-400 mr-3" size={22} />
+              <MessageSquare className="text-second mr-3" size={22} />
               Send a Message
             </h2>
 
@@ -76,7 +79,7 @@ const Contact = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, name: e.target.value })
                     }
-                    className="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-violet-500 focus:ring-4 focus:ring-violet-500/10 transition-all duration-300"
+                    className="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-[#89b4fa] focus:ring-4 focus:ring-violet-500/10 transition-all duration-300"
                     placeholder="John Doe"
                   />
                 </div>
@@ -90,7 +93,7 @@ const Contact = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
                     }
-                    className="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-violet-500 focus:ring-4 focus:ring-violet-500/10 transition-all duration-300"
+                    className="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-[#89b4fa] focus:ring-4 focus:ring-violet-500/10 transition-all duration-300"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -105,7 +108,7 @@ const Contact = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
-                  className="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-violet-500 focus:ring-4 focus:ring-violet-500/10 transition-all duration-300 resize-none"
+                  className="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-[#89b4fa] focus:ring-4 focus:ring-violet-500/10 transition-all duration-300 resize-none"
                   placeholder="Hi Hrushikesh, I'd like to talk about..."
                 />
               </div>
@@ -113,7 +116,7 @@ const Contact = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="flex items-center justify-center w-full space-x-2 bg-violet-600 hover:bg-violet-500 text-white px-6 py-4 rounded-xl font-semibold transition-colors duration-300 shadow-lg shadow-violet-500/20 group"
+                className="flex items-center justify-center w-full space-x-2 bg-btn hover:bg-btn-hover text-btn px-6 py-4 rounded-xl font-semibold transition-colors duration-300 shadow-lg shadow-violet-500/20 group"
               >
                 <span>Send Message</span>
                 <Send
@@ -140,8 +143,8 @@ const Contact = () => {
                 href="mailto:hrushij92@gmail.com"
                 className="flex items-start group"
               >
-                <div className="bg-zinc-800 p-3.5 rounded-xl border border-zinc-700 mr-4 group-hover:border-violet-500 transition-colors">
-                  <Mail className="text-violet-400" size={22} />
+                <div className="bg-zinc-800 p-3.5 rounded-xl border border-zinc-700 mr-4 transition-colors">
+                  <Mail className="text-second" size={22} />
                 </div>
                 <div className="pt-1">
                   <h3 className="text-white font-semibold text-md mb-1">
@@ -151,8 +154,8 @@ const Contact = () => {
                 </div>
               </a>
               <div className="flex items-start group">
-                <div className="bg-zinc-800 p-3.5 rounded-xl border border-zinc-700 mr-4 group-hover:border-violet-500 transition-colors">
-                  <MapPin className="text-violet-400" size={22} />
+                <div className="bg-zinc-800 p-3.5 rounded-xl border border-zinc-700 mr-4 transition-colors">
+                  <MapPin className="text-second" size={22} />
                 </div>
                 <div className="pt-1">
                   <h3 className="text-white font-semibold text-md mb-1">

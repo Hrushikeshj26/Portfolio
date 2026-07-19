@@ -88,14 +88,14 @@ const About = () => {
   return (
     <div className="min-h-screen pb-10">
       
-      <div className="min-h-40 w-full bg-linear-to-r from-violet-800 to-violet-950 relative overflow-hidden">
+      <div className="min-h-40 w-full bg-linear-to-r from-[#89b4fa]/40 to-[#89b4fa]/50 relative overflow-hidden">
         <div
-          className="absolute inset-0 z-0 pointer-events-none opacity-40"
+          className="absolute inset-0 z-0 pointer-events-none opacity-50"
           style={{
             backgroundImage: `
-              repeating-linear-gradient(45deg, rgba(139, 92, 246, 0.4) 0, rgba(139, 92, 246, 0.4) 1px, transparent 1px, transparent 32px),
-              repeating-linear-gradient(-45deg, rgba(139, 92, 246, 0.4) 0, rgba(139, 92, 246, 0.4) 1px, transparent 1px, transparent 32px)
-            `,
+        repeating-linear-gradient(45deg, rgba(203, 166, 247, 0.4) 0, rgba(203, 166, 247, 0.4) 1px, transparent 1px, transparent 32px),
+        repeating-linear-gradient(-45deg, rgba(203, 166, 247, 0.4) 0, rgba(203, 166, 247, 0.4) 1px, transparent 1px, transparent 32px)
+      `,
             backgroundSize: "46px 46px",
           }}
         />
@@ -108,7 +108,7 @@ const About = () => {
           transition={{ duration: 0.5 }}
           className="border-2 border-second rounded-2xl p-7 sm:p-10 backdrop-blur-3xl shadow-xl max-w-4xl"
         >
-          <p className="text-xs font-spacemono uppercase tracking-widest text-violet-400 mb-3 font-bold">
+          <p className="text-xs font-spacemono uppercase tracking-widest text-second mb-3 font-bold">
             About me
           </p>
           <h1 className="text-3xl sm:text-4xl font-bold font-spacemono text-white tracking-tight mb-4">
@@ -130,7 +130,7 @@ const About = () => {
             </p>
 
             <div className="relative pl-3">
-              <div className="absolute left-12.5 top-4 bottom-4 w-1 bg-linear-to-b from-violet-500/70 via-violet-500/30 to-transparent rounded-full" />
+              <div className="absolute left-12.5 top-4 bottom-4 w-1 bg-linear-to-b from-[#89b4fa] via-[#89b4fa]/30 to-transparent rounded-full" />
               
               <div className="space-y-12">
                 {journey.map(({ year, icon: Icon, title, description }, i) => (
@@ -142,7 +142,7 @@ const About = () => {
                     transition={{ duration: 0.5, delay: i * 0.15 }}
                     className="relative flex gap-6 group"
                   >
-                    <div className="relative z-10 shrink-0 w-20 h-20 rounded-full bg-second border-2 border-second group-hover:border-violet-500 flex items-center justify-center text-violet-300 transition-colors duration-300 shadow-md">
+                    <div className="relative z-10 shrink-0 w-20 h-20 rounded-full bg-second border-2 border-second group-hover:border-main flex items-center justify-center text-main transition-colors duration-300 shadow-md">
                       <Icon size={28} />
                     </div>
                     <div className="pt-1.5 pb-2">
@@ -201,7 +201,7 @@ const About = () => {
                     className="bg-card border-2 border-subtle hover:border-second rounded-xl p-6 transition-colors duration-300 group shadow-lg"
                   >
                     <div className="flex items-center gap-4 mb-3">
-                      <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-surface text-violet-200 group-hover:text-violet-300 transition-colors">
+                      <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-surface text-main transition-colors">
                         <Icon size={20} />
                       </span>
                       <h3 className="text-white font-semibold text-sm">{title}</h3>
@@ -236,7 +236,7 @@ const About = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-btn hover:bg-btn-hover text-white font-semibold text-sm px-6 py-3 rounded-lg transition-colors shadow-lg group/cta"
+                className="inline-flex items-center gap-2 bg-btn hover:bg-btn-hover text-btn font-semibold text-sm px-6 py-3 rounded-lg transition-colors shadow-lg group/cta"
               >
                 Send a message directly
                 <ArrowUpRight
