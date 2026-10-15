@@ -1,15 +1,21 @@
-import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+  useLocation,
+} from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 
-import SmoothScroll from './components/SmoothScroll';
-import Sidebar from './components/Sidebar';
-import Footer from './components/Footer';
-import Preloader from './components/Preloader';
-import Home from './pages/Home';
-import About from './pages/About';
-import Projects from './pages/Projects';
-import Contact from './pages/Contact';
+import SmoothScroll from "./components/SmoothScroll";
+import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
+import Preloader from "./components/Preloader";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
 
 const PageWrapper = ({ children }) => {
   return (
@@ -31,10 +37,38 @@ const AnimatedRoutes = () => {
   return (
     <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
-        <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
-        <Route path="/projects" element={<PageWrapper><Projects /></PageWrapper>} />
-        <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
+        <Route
+          path="/"
+          element={
+            <PageWrapper>
+              <Home />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <PageWrapper>
+              <About />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/projects"
+          element={
+            <PageWrapper>
+              <Projects />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <PageWrapper>
+              <Contact />
+            </PageWrapper>
+          }
+        />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </AnimatePresence>
@@ -45,7 +79,6 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 2000);
@@ -55,14 +88,12 @@ function App() {
 
   return (
     <SmoothScroll>
-      
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>
 
       <Router>
         <div className="flex min-h-screen bg-main text-gray-300 font-google overflow-x-hidden selection:bg-violet-500/30">
-          
           <Sidebar />
 
           <main className="flex-1 flex flex-col pt-16 md:pt-0 md:ml-64 min-w-0">
@@ -71,7 +102,6 @@ function App() {
             </div>
             <Footer />
           </main>
-          
         </div>
       </Router>
     </SmoothScroll>

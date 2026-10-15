@@ -1,93 +1,124 @@
 import { motion } from "framer-motion";
 import {
   Code2,
-  Layers,
   Database,
+  Server,
   Sparkles,
-  MapPin,
-  Coffee,
   Rocket,
-  Briefcase,
   Gamepad2,
   ArrowUpRight,
   Terminal,
   GraduationCapIcon,
   CodeXml,
+  Workflow,
+  Cpu,
 } from "lucide-react";
-import { FaGithub, FaLinkedin, FaXTwitter, FaInstagram } from "react-icons/fa6";
 
 const journey = [
   {
-    year: "The Pivot",
+    year: "2024 Graduate",
     icon: GraduationCapIcon,
     title: "Bachelor of Computer Applications",
+    tech: ["CS Fundamentals", "Programming", "DBMS"],
     description:
-      "Realized my true passion lay in software. Transitioned into a BCA program where I went deep on computer science fundamentals and web development.",
+      "After completing my 12th, I joined the BCA program and graduated in 2024—building a solid foundation in computer science, databases, and software development.",
   },
   {
-    year: "2024",
+    year: "2024–25",
     icon: CodeXml,
-    title: "Independent Frontend Development",
+    title: "Web Development & React Native",
+    tech: ["React.js", "Tailwind CSS", "JavaScript", "React Native"],
     description:
-      "Dedicated my time to intense, self-directed building. Mastered React.js and Tailwind CSS by engineering complex interfaces, building real-world projects, and pushing code daily.",
+      "Dived deep into modern frontend engineering after graduation. Mastered React.js and Tailwind CSS by building responsive web interfaces, while also exploring mobile app development with React Native.",
   },
   {
-    year: "2025–26",
-    icon: Rocket,
-    title: "Full-Stack & React Native",
+    year: "2026",
+    icon: Server,
+    title: "Completed Full-Stack Development",
+    tech: ["Node.js", "Express.js", "MongoDB", "PostgreSQL", "Supabase"],
     description:
-      "Expanded my toolbelt to include Supabase and PostgreSQL for full-stack apps (like Cravingo) and started exploring mobile development with React Native.",
+      "Completed my full-stack development course and expanded into backend engineering—learning to architect REST APIs, manage databases, and connect full end-to-end systems.",
   },
   {
     year: "Now",
-    icon: Sparkles,
-    title: "Open to Opportunities",
+    icon: Rocket,
+    title: "Building Projects & Open to Work",
+    tech: ["Full-Stack Projects", "Remote Roles", "Freelance"],
     description:
-      "Actively seeking full-time roles or contract work where I can ship high-quality digital experiences and bridge the gap between heavy logic and sleek design.",
+      "Currently shipping real-world full-stack applications and sharpening my portfolio to land remote full-stack developer roles and freelance projects.",
   },
 ];
 
 const focusAreas = [
   {
-    title: "Interface Engineering",
+    title: "Frontend & UI Engineering",
     icon: Code2,
     accent: "text-sky-400",
     ring: "bg-sky-500/10 border-sky-500/20 group-hover:border-sky-500/50",
-    description: "Turning designs into responsive, accessible interfaces that hold up across devices using React and Tailwind.",
+    badge: "Client",
+    description:
+      "Turning complex requirements into responsive, accessible interfaces and interactive dashboards using React.js, Tailwind CSS, and Framer Motion.",
   },
   {
-    title: "Component Architecture",
-    icon: Layers,
-    accent: "text-violet-400",
-    ring: "bg-violet-500/10 border-violet-500/20 group-hover:border-violet-500/50",
-    description: "Structuring React apps so components stay reusable and state stays predictable as projects scale.",
-  },
-  {
-    title: "Full-Stack Foundations",
-    icon: Database,
+    title: "Backend & REST APIs",
+    icon: Server,
     accent: "text-emerald-400",
     ring: "bg-emerald-500/10 border-emerald-500/20 group-hover:border-emerald-500/50",
-    description: "Integrating BaaS tools like Supabase to handle authentication, real-time databases, and data architecture.",
+    badge: "Server",
+    description:
+      "Building clean, scalable RESTful APIs, authentication systems, and server-side routing using Node.js, Express.js, and Bun.",
   },
   {
-    title: "Interaction & Polish",
-    icon: Sparkles,
+    title: "Database Architecture",
+    icon: Database,
+    accent: "text-violet-400",
+    ring: "bg-violet-500/10 border-violet-500/20 group-hover:border-violet-500/50",
+    badge: "Data",
+    description:
+      "Designing structured schemas, queries, and real-time data flows across MongoDB Atlas, PostgreSQL, and Supabase.",
+  },
+  {
+    title: "End-to-End Integration",
+    icon: Workflow,
     accent: "text-amber-400",
     ring: "bg-amber-500/10 border-amber-500/20 group-hover:border-amber-500/50",
-    description: "Focusing on sleek animations, minimalist design, and edge cases to ensure a product feels truly premium.",
+    badge: "System",
+    description:
+      "Bridging client-side state with backend logic so applications stay predictable, fast, and genuinely enjoyable to use as they scale.",
   },
 ];
 
 const beyondCoding = [
-  { title: "Linux & Custom ROMs", icon: Terminal, blurb: "Constantly testing Linux distros and flashing custom Android ROMs." },
-  { title: "Competitive Gaming", icon: Gamepad2, blurb: "Grinding ranks in BGMI, COD-M, Marvel Rivals, Valorant or trying out CS2." },
+  {
+    title: "Linux & Custom ROMs",
+    icon: Terminal,
+    blurb:
+      "Constantly testing Linux distros, customizing desktop environments, and flashing custom Android ROMs.",
+  },
+  {
+    title: "Competitive Gaming",
+    icon: Gamepad2,
+    blurb:
+      "Grinding ranks in BGMI, COD-M, Marvel Rivals, Valorant or trying out CS2.",
+  },
+  {
+    title: "Hardware & Setup Tinkering",
+    icon: Cpu,
+    blurb:
+      "Optimizing PC performance, dialing in display and audio setups, and experimenting with new gear.",
+  },
+  {
+    title: "Dev Workflow & Rice",
+    icon: Sparkles,
+    blurb:
+      "Tweaking VS Code themes, trying out developer fonts, and exploring new tools in the web ecosystem.",
+  },
 ];
-
 
 const About = () => {
   return (
     <div className="min-h-screen pb-10">
-      
+      {/* Unchanged Top Banner */}
       <div className="min-h-40 w-full bg-linear-to-r from-[#89b4fa]/40 to-[#89b4fa]/50 relative overflow-hidden">
         <div
           className="absolute inset-0 z-0 pointer-events-none opacity-50"
@@ -101,8 +132,9 @@ const About = () => {
         />
       </div>
 
+      {/* Unchanged Original Top About Card */}
       <div className="px-6 md:px-10 lg:px-12 relative z-10 -mt-16 sm:-mt-20 mb-14">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -115,84 +147,128 @@ const About = () => {
             The story so far
           </h1>
           <p className="text-gray-400 text-sm sm:text-base leading-relaxed max-w-2xl">
-            A closer look at my transition int Development, what I care about as an engineer, and what I do away from the keyboard.
+            A closer look at my transition into Development, what I care about
+            as an engineer, and what I do away from the keyboard.
           </p>
         </motion.div>
       </div>
 
+      {/* Rebuilt Full-Stack Body */}
       <div className="px-6 md:px-5 lg:px-12 space-y-16 md:max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-          
+          {/* Left Column: Full-Stack Journey */}
           <section className="lg:col-span-5">
-            <h2 className="text-2xl font-bold text-white mb-2 font-spacemono tracking-tight">My Journey</h2>
+            <h2 className="text-2xl font-bold text-white mb-2 font-spacemono tracking-tight">
+              My Journey
+            </h2>
             <p className="text-gray-400 text-sm mb-10">
-              From engineering circuits to shipping user interfaces.
+              From BCA graduate to building full-stack web applications.
             </p>
 
             <div className="relative pl-3">
               <div className="absolute left-12.5 top-4 bottom-4 w-1 bg-linear-to-b from-[#89b4fa] via-[#89b4fa]/30 to-transparent rounded-full" />
-              
+
               <div className="space-y-12">
-                {journey.map(({ year, icon: Icon, title, description }, i) => (
-                  <motion.div 
-                    key={i} 
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 0.5, delay: i * 0.15 }}
-                    className="relative flex gap-6 group"
-                  >
-                    <div className="relative z-10 shrink-0 w-20 h-20 rounded-full bg-second border-2 border-second group-hover:border-main flex items-center justify-center text-main transition-colors duration-300 shadow-md">
-                      <Icon size={28} />
-                    </div>
-                    <div className="pt-1.5 pb-2">
-                      <span className="inline-block px-2.5 py-1 bg-surface rounded-md text-xs font-bold font-spacemono uppercase tracking-widest text-violet-100 mb-3 shadow-sm">
-                        {year}
-                      </span>
-                      <h3 className="text-white font-semibold text-lg mb-2">{title}</h3>
-                      <p className="text-gray-400 text-md leading-relaxed max-w-sm">{description}</p>
-                    </div>
-                  </motion.div>
-                ))}
+                {journey.map(
+                  ({ year, icon: Icon, title, tech, description }, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true, margin: "-50px" }}
+                      transition={{ duration: 0.5, delay: i * 0.15 }}
+                      className="relative flex gap-6 group"
+                    >
+                      <div className="relative z-10 shrink-0 w-20 h-20 rounded-full bg-second border-2 border-second group-hover:border-main flex items-center justify-center text-main transition-colors duration-300 shadow-md">
+                        <Icon size={28} />
+                      </div>
+                      <div className="pt-1.5 pb-2">
+                        <span className="inline-block px-2.5 py-1 bg-surface rounded-md text-xs font-bold font-spacemono uppercase tracking-widest text-violet-100 mb-3 shadow-sm">
+                          {year}
+                        </span>
+                        <h3 className="text-white font-semibold text-lg mb-2">
+                          {title}
+                        </h3>
+                        <p className="text-gray-400 text-md leading-relaxed max-w-sm mb-3">
+                          {description}
+                        </p>
+                        <div className="flex flex-wrap gap-1.5">
+                          {tech.map((item) => (
+                            <span
+                              key={item}
+                              className="text-[11px] font-spacemono px-2 py-0.5 rounded bg-card border border-subtle text-gray-300"
+                            >
+                              {item}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </motion.div>
+                  ),
+                )}
               </div>
             </div>
           </section>
 
+          {/* Right Column: Full-Stack Focus Areas & Beyond Coding */}
           <div className="lg:col-span-7 space-y-16">
-            
             <section>
-              <h2 className="text-2xl font-bold text-white mb-2 font-spacemono tracking-tight">Core Focus Areas</h2>
-              <p className="text-gray-400 text-sm mb-8">Where I spend most of my technical attention.</p>
-              
+              <h2 className="text-2xl font-bold text-white mb-2 font-spacemono tracking-tight">
+                Core Focus Areas
+              </h2>
+              <p className="text-gray-400 text-sm mb-8">
+                How I architect and ship applications across the stack.
+              </p>
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                {focusAreas.map(({ title, icon: Icon, accent, ring, description }, i) => (
-                  <motion.div 
-                    key={title} 
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 0.5, delay: i * 0.1 }}
-                    whileHover={{ y: -6 }}
-                    className="bg-card border-2 border-subtle hover:border-second rounded-xl p-6 transition-colors duration-300 group shadow-lg"
-                  >
-                    <span className={`inline-flex items-center justify-center w-12 h-12 rounded-xl border transition-colors duration-300 ${ring} ${accent} mb-5`}>
-                      <Icon size={22} />
-                    </span>
-                    <h3 className="text-white font-semibold text-base mb-2 group-hover:text-violet-300 transition-colors">{title}</h3>
-                    <p className="text-gray-400 text-sm leading-relaxed">{description}</p>
-                  </motion.div>
-                ))}
+                {focusAreas.map(
+                  (
+                    { title, icon: Icon, accent, ring, badge, description },
+                    i,
+                  ) => (
+                    <motion.div
+                      key={title}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-50px" }}
+                      transition={{ duration: 0.5, delay: i * 0.1 }}
+                      whileHover={{ y: -6 }}
+                      className="bg-card border-2 border-subtle hover:border-second rounded-xl p-6 transition-colors duration-300 group shadow-lg"
+                    >
+                      <div className="flex items-center justify-between mb-5">
+                        <span
+                          className={`inline-flex items-center justify-center w-12 h-12 rounded-xl border transition-colors duration-300 ${ring} ${accent}`}
+                        >
+                          <Icon size={22} />
+                        </span>
+                        <span className="text-[11px] font-spacemono uppercase tracking-wider px-2.5 py-1 rounded-md bg-surface text-gray-400 border border-subtle">
+                          {badge}
+                        </span>
+                      </div>
+                      <h3 className="text-white font-semibold text-base mb-2 group-hover:text-violet-300 transition-colors">
+                        {title}
+                      </h3>
+                      <p className="text-gray-400 text-sm leading-relaxed">
+                        {description}
+                      </p>
+                    </motion.div>
+                  ),
+                )}
               </div>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-white mb-2 font-spacemono tracking-tight">Beyond Coding</h2>
-              <p className="text-gray-400 text-sm mb-8">The non-technical stuff that keeps me balanced.</p>
-              
+              <h2 className="text-2xl font-bold text-white mb-2 font-spacemono tracking-tight">
+                Beyond Coding
+              </h2>
+              <p className="text-gray-400 text-sm mb-8">
+                The non-technical stuff that keeps me balanced.
+              </p>
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 {beyondCoding.map(({ title, icon: Icon, blurb }, i) => (
-                  <motion.div 
-                    key={title} 
+                  <motion.div
+                    key={title}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
@@ -204,9 +280,13 @@ const About = () => {
                       <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-surface text-main transition-colors">
                         <Icon size={20} />
                       </span>
-                      <h3 className="text-white font-semibold text-sm">{title}</h3>
+                      <h3 className="text-white font-semibold text-sm">
+                        {title}
+                      </h3>
                     </div>
-                    <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">{blurb}</p>
+                    <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
+                      {blurb}
+                    </p>
                   </motion.div>
                 ))}
               </div>
@@ -214,8 +294,9 @@ const About = () => {
           </div>
         </div>
 
+        {/* Bottom CTA */}
         <section className="pt-8">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -223,15 +304,17 @@ const About = () => {
             className="bg-card border border-main rounded-2xl p-8 sm:p-12 text-center relative overflow-hidden shadow-xl"
           >
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-violet-600/10 rounded-full blur-3xl -mt-32 pointer-events-none" />
-            
+
             <div className="relative z-10">
               <h2 className="text-white text-2xl sm:text-3xl font-bold font-spacemono tracking-tight mb-3">
                 Let's connect
               </h2>
               <p className="text-gray-300 text-sm sm:text-base mb-8 max-w-md mx-auto tracking-wide">
-                Always happy to talk shop, swap project ideas, discuss the markets, or just say hello. Find me on:
+                Open to remote full-stack roles and freelance projects. Always
+                happy to talk web development, swap project ideas, or just say
+                hello.
               </p>
-                            
+
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

@@ -9,6 +9,7 @@ import {
   Database,
   Wrench,
   Users,
+  Server,
 } from "lucide-react";
 import profilepic from "../assets/hmj2.jpg";
 
@@ -18,35 +19,41 @@ const skillCategories = [
     icon: Code2,
     accent: "text-sky-400",
     ring: "hover:border-sky-500/50 hover:shadow-sky-500/10",
-    skills: ["HTML5", "CSS3", "JavaScript (ES6+)"],
+    skills: ["JavaScript (ES6+)", "SQL", "HTML5", "CSS3"],
   },
   {
-    title: "Frameworks & Libraries",
+    title: "Frontend Ecosystem",
     icon: Layers,
     accent: "text-violet-400",
     ring: "hover:border-violet-500/50 hover:shadow-violet-500/10",
-    skills: ["React.js", "Tailwind CSS", "Framer Motion"],
+    skills: [
+      "React.js",
+      "Tailwind CSS",
+      "Framer Motion",
+      // "React Native",
+      // "Expo",
+    ],
   },
   {
-    title: "Backend",
-    icon: Database,
+    title: "Backend & APIs",
+    icon: Server,
     accent: "text-emerald-400",
     ring: "hover:border-emerald-500/50 hover:shadow-emerald-500/10",
-    skills: ["Supabase", "PostgreSQL"],
+    skills: ["Node.js", "Express.js", "RESTful APIs", "JWT Auth", "Bun"],
   },
   {
-    title: "Tools & Platforms",
+    title: "Databases & BaaS",
+    icon: Database,
+    accent: "text-rose-400",
+    ring: "hover:border-rose-500/50 hover:shadow-rose-500/10",
+    skills: ["MongoDB Atlas", "Mongoose", "PostgreSQL", "Supabase"],
+  },
+  {
+    title: "Tools & DevOps",
     icon: Wrench,
     accent: "text-amber-400",
     ring: "hover:border-amber-500/50 hover:shadow-amber-500/10",
-    skills: ["Git", "GitHub", "Figma", "Vercel", "Netlify"],
-  },
-  {
-    title: "Soft Skills",
-    icon: Users,
-    accent: "text-rose-400",
-    ring: "hover:border-rose-500/50 hover:shadow-rose-500/10",
-    skills: ["Problem Solving", "Communication", "Attention to Detail"],
+    skills: ["Git & GitHub", "Linux", "Postman", "Vercel", "Figma"],
   },
 ];
 
@@ -106,7 +113,7 @@ const Home = () => {
               Hrushikesh Jadhav
             </h1>
             <p className="text-main font-spacemono font-semibold text-sm sm:text-base tracking-wide uppercase">
-              Frontend Developer
+              Full-Stack Developer
             </p>
           </div>
 
@@ -136,15 +143,16 @@ const Home = () => {
             </h2>
             <div className="text-gray-400 text-sm sm:text-base leading-relaxed space-y-4 max-w-2xl">
               <p>
-                I'm a frontend developer based in India, dedicated to crafting
-                clean, modern, and aesthetic user interfaces. With a strong
-                foundation in React.js, JavaScript, and Tailwind CSS, I focus on
-                building responsive and accessible web applications.
+                I'm a full-stack developer based in India specializing in
+                turning complex ideas into clean, high-performance web
+                applications. Combining React.js and Tailwind CSS on the
+                frontend with Node.js and scalable database systems on the
+                backend, I build complete digital products from the ground up.
               </p>
               <p>
-                I love bridging the gap between design and engineering to
-                deliver digital experiences that feel fast, fluid, and genuinely
-                enjoyable to use.
+                I focus on the full picture—bridging aesthetic UI design with
+                rock-solid backend engineering so every application looks sharp
+                and runs effortlessly under the hood.
               </p>
             </div>
             <Link
@@ -187,7 +195,7 @@ const Home = () => {
 
                   <p className="text-gray-400 text-sm leading-relaxed mb-5 max-w-lg">
                     I am currently open to freelance projects, contract work,
-                    and full-time frontend roles. If you have an exciting
+                    and full-time developer roles. If you have an exciting
                     project in mind, let's build something awesome together.
                   </p>
 
