@@ -11,7 +11,7 @@ import {
   Users,
   Server,
 } from "lucide-react";
-import profilepic from "../assets/hmj2.jpg";
+import profilepic from "../assets/hmj3.PNG";
 
 const skillCategories = [
   {
